@@ -220,7 +220,7 @@ exports.checkPicks = functionsFirebase.https.onRequest(async (request, response)
         }
 
 
-        // Update this part of the script to add points based on the number of occurrences
+        // add points based on the number of occurrences
         const sumOccurrences = countPreviousDraws(draws, index);
         if (sumOccurrences > 0) {
             draw.points.nonCritical += sumOccurrences;
@@ -250,7 +250,7 @@ exports.checkPicks = functionsFirebase.https.onRequest(async (request, response)
         }
 
 
-        // Update this part of the script to add points based on the number of occurrences
+        // add points based on the number of occurrences
         const previousDrawTwoNumDownOccurrences = countPreviousDrawTwoNumDown(draws, index);
         if (previousDrawTwoNumDownOccurrences > 0) {
             draw.points.nonCritical += previousDrawTwoNumDownOccurrences;
@@ -258,7 +258,7 @@ exports.checkPicks = functionsFirebase.https.onRequest(async (request, response)
         }
 
 
-        // Change this function to count the number of occurrences of previousDrawDifference in the previous 31 draws
+        // Count the number of occurrences of previousDrawDifference in the previous 31 draws
         function countPreviousDrawDifference(draws, currentIndex) {
             const start = currentIndex + 1;
             const end = Math.min(currentIndex + 32, draws.length);
@@ -269,6 +269,7 @@ exports.checkPicks = functionsFirebase.https.onRequest(async (request, response)
             };
 
             for (let i = start; i < end; i++) {
+                //the following if runs only for the first 3 draws
                 if (i < start + 3 && draws[i].previousDrawDifference.allPositionsString === currentDraw.previousDrawDifference.allPositionsString) {
                     results.allPositionsString++;
                 }
@@ -282,7 +283,7 @@ exports.checkPicks = functionsFirebase.https.onRequest(async (request, response)
         }
 
 
-        // Update this part of the script to add points based on the number of occurrences
+        // Add points based on the number of occurrences
         const previousDrawDifferenceOccurrences = countPreviousDrawDifference(draws, index);
         if (previousDrawDifferenceOccurrences.allDifferenceString > 0) {
             draw.points.nonCritical += previousDrawDifferenceOccurrences.allDifferenceString;
@@ -291,6 +292,58 @@ exports.checkPicks = functionsFirebase.https.onRequest(async (request, response)
         if (previousDrawDifferenceOccurrences.allPositionsString > 0) {
             draw.points.nonCritical += previousDrawDifferenceOccurrences.allPositionsString;
             draw.reasonsList.push(`previousDrawDifferenceAllPositionsInPrevious3: ${previousDrawDifferenceOccurrences.allPositionsString} occurrences`);
+        }
+
+
+        // Function to count the number of occurrences of fullNumsString in winningCombinationsObj.list for all previous draws
+        function countFullNumsStringOccurrences(draws, currentIndex) {
+            const start = currentIndex + 1;
+            const end = Math.min(currentIndex + 32, draws.length);
+            const currentDraw = draws[currentIndex];
+            const currentFullNumsString = currentDraw.fullNumsString;
+            let count = 0;
+
+            for (let i = start; i < end; i++) {
+                if (draws[i].winningCombinationsObj.list.includes(currentFullNumsString)) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+
+        // add points based on the number of occurrences
+        const fullNumsStringOccurrences = countFullNumsStringOccurrences(draws, index);
+        if (fullNumsStringOccurrences > 0) {
+            draw.points.nonCritical += fullNumsStringOccurrences;
+            draw.reasonsList.push(`fullNumsStringInWinningCombinationsObjList: ${fullNumsStringOccurrences} occurrences`);
+        }
+
+
+        // Function to count the number of occurrences of fullNumsString in all previous draws
+        function countFullNumsStringOccurrencesInAllDraws(draws, currentIndex) {
+            const start = currentIndex + 1;
+            const end = Math.min(currentIndex + 50, draws.length);
+            const currentDraw = draws[currentIndex];
+            const currentFullNumsString = currentDraw.fullNumsString;
+            let count = 0;
+
+            for (let i = start; i < end; i++) {
+                if (draws[i].fullNumsString === currentFullNumsString) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+
+        // Add points based on the number of occurrences
+        const fullNumsStringOccurrencesInAllDraws = countFullNumsStringOccurrencesInAllDraws(draws, index);
+        if (fullNumsStringOccurrencesInAllDraws > 0) {
+            draw.points.nonCritical += fullNumsStringOccurrencesInAllDraws;
+            draw.reasonsList.push(`fullNumsStringInAllPreviousDraws: ${fullNumsStringOccurrencesInAllDraws} occurrences`);
         }
 
 
