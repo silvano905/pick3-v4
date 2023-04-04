@@ -65,6 +65,19 @@ exports.getAll = functionsFirebase.https.onRequest(async (request, response) => 
                             return num % 2 === 0 ? 'even' : 'odd'
                         })
 
+                        const evenOddCheckFirstTwo = pick.slice(0, 2).map(num => {
+                            return num % 2 === 0 ? 'even' : 'odd'
+                        })
+
+                        const evenOddCheckLastTwo = pick.slice(-2).map(num => {
+                            return num % 2 === 0 ? 'even' : 'odd'
+                        })
+
+                        let firstAndLastArr = [pick[0], pick[2]]
+                        const evenOddCheckFirstAndLast = firstAndLastArr.map(num => {
+                            return num % 2 === 0 ? 'even' : 'odd'
+                        })
+
                         let letter = [];
 
                         for (let i = 0; i < pick.length - 1; i++) {
@@ -88,6 +101,21 @@ exports.getAll = functionsFirebase.https.onRequest(async (request, response) => 
                             fireball: fireball[0],
                             lowHighEqual: letter.join(''),
                             fullNumsString: pick.join(''),
+                            firstTwoNumsObj: {
+                                firstTwoNumsString: pick.slice(0, 2).join(''),
+                                firstTwoNumsSum: pick[0] + pick[1],
+                                firstTwoEvenOdd: evenOddCheckFirstTwo.join('')
+                            },
+                            lastTwoNumsObj: {
+                                lastTwoNumsString: pick.slice(-2).join(''),
+                                lastTwoNumsSum: pick[1] + pick[2],
+                                lastTwoEvenOdd: evenOddCheckLastTwo.join('')
+                            },
+                            firstAndLastNumsObj: {
+                                firstAndLastNumsString: [pick[0], pick[pick.length - 1]].join(''),
+                                firstAndLastNumsSum: pick[0] + pick[2],
+                                firstAndLastEvenOdd: evenOddCheckFirstAndLast.join(',')
+                            },
                             timestamp: admin.firestore.Timestamp.now(),
                             winningCombinationsObj: {
                                 list: [
@@ -346,6 +374,68 @@ exports.checkPicks = functionsFirebase.https.onRequest(async (request, response)
             draw.reasonsList.push(`fullNumsStringInAllPreviousDraws: ${fullNumsStringOccurrencesInAllDraws} occurrences`);
         }
 
+
+        // Function to count the number of occurrences of firstTwo/lastTwo/firstAndLast in all previous draws
+        function countFirstTwoLastTwoFirstAndLast(draws, currentIndex) {
+            const start = currentIndex + 1;
+            const end = Math.min(currentIndex + 11, draws.length);
+            const currentDraw = draws[currentIndex];
+            let count = 0;
+
+            for (let i = start; i < end; i++) {
+                if(currentDraw.firstTwoNumsObj.firstTwoNumsSum===draws[i].firstTwoNumsObj.firstTwoNumsSum&&
+                    currentDraw.lastTwoNumsObj.lastTwoNumsSum===draws[i].lastTwoNumsObj.lastTwoNumsSum){
+                    count++;
+                }
+                if(currentDraw.firstTwoNumsObj.firstTwoNumsSum===draws[i].firstTwoNumsObj.firstTwoNumsSum&&
+                    currentDraw.firstAndLastNumsObj.firstAndLastNumsSum===draws[i].firstAndLastNumsObj.firstAndLastNumsSum){
+                    count++;
+                }
+                if(currentDraw.firstAndLastNumsObj.firstAndLastNumsSum===draws[i].firstAndLastNumsObj.firstAndLastNumsSum&&
+                    currentDraw.lastTwoNumsObj.lastTwoNumsSum===draws[i].lastTwoNumsObj.lastTwoNumsSum){
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+        // Add points based on the number of occurrences
+        const fullCountFirstTwoLastTwoFirstAndLast = countFirstTwoLastTwoFirstAndLast(draws, index);
+        if (fullCountFirstTwoLastTwoFirstAndLast > 0) {
+            draw.points.nonCritical += fullCountFirstTwoLastTwoFirstAndLast;
+            draw.reasonsList.push(`fullCountFirstTwoLastTwoFirstAndLast: ${fullCountFirstTwoLastTwoFirstAndLast} occurrences`);
+        }
+
+
+        // Function to count similar pairs in fullNumsString for all previous draws
+        function countSimilarPairsInFullNumsString(draws, currentIndex) {
+            const currentDraw = draws[currentIndex];
+            const currentFullNumsString = currentDraw.fullNumsString;
+            let count = 0;
+            const start = currentIndex + 1;
+            const end = Math.min(currentIndex + 11, draws.length);
+
+            for (let i = start; i < end; i++) {
+                const firstTwoMatch = currentFullNumsString.slice(0, 2) === draws[i].fullNumsString.slice(0, 2);
+                const lastTwoMatch = currentFullNumsString.slice(-2) === draws[i].fullNumsString.slice(-2);
+                const firstAndLastMatch = currentFullNumsString[0] === draws[i].fullNumsString[0] && currentFullNumsString.slice(-1) === draws[i].fullNumsString.slice(-1);
+
+                if (firstTwoMatch || lastTwoMatch || firstAndLastMatch) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+
+        // Update this part of the script to add points based on the number of similar pairs
+        const similarPairsCount = countSimilarPairsInFullNumsString(draws, index);
+        if (similarPairsCount > 0) {
+            draw.points.nonCritical += similarPairsCount;
+            draw.reasonsList.push(`similarPairsInFullNumsString: ${similarPairsCount} occurrences`);
+        }
 
         // The applyRules function takes an object with critical and noncritical points as input.
         // It converts every 2 noncritical points into 1 critical point and updates the object accordingly.

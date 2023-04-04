@@ -4035,3 +4035,509 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2023-04-04T16:41:01.866Z] [worker-us-central1-checkPicks-d0fc2607-3d0f-4da9-ae24-53101dbbce23]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-d0fc2607-3d0f-4da9-ae24-53101dbbce23]: IDLE"}}
 [debug] [2023-04-04T16:41:01.866Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
 [info] i  functions: Finished "checkPicks" in 13896.0837ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Finished \"checkPicks\" in 13896.0837ms"}}
+[debug] [2023-04-04T19:09:56.604Z] File C:\Users\alexa\WebstormProjects\pick3-v4\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-04-04T19:09:57.611Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T19:11:09.388Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cheerio": "^1.0.0-rc.12",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-04-04T19:11:09.389Z] Building nodejs source
+[debug] [2023-04-04T19:11:09.391Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T19:11:09.822Z] Serving at port 9005
+
+[debug] [2023-04-04T19:11:10.047Z] Got response from /__/functions.yaml {"endpoints":{"getAll":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"getAll"},"checkPicks":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"checkPicks"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T19:11:10.050Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: getAll, checkPicks. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getAll, checkPicks."}}
+[debug] [2023-04-04T19:11:10.060Z] [worker-pool] Shutting down IDLE worker (us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:11:10.060Z] [worker-us-central1-checkPicks-d0fc2607-3d0f-4da9-ae24-53101dbbce23]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-d0fc2607-3d0f-4da9-ae24-53101dbbce23]: FINISHING"}}
+[debug] [2023-04-04T19:11:10.068Z] [worker-us-central1-checkPicks-d0fc2607-3d0f-4da9-ae24-53101dbbce23]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-d0fc2607-3d0f-4da9-ae24-53101dbbce23]: exited"}}
+[debug] [2023-04-04T19:11:10.068Z] [worker-us-central1-checkPicks-d0fc2607-3d0f-4da9-ae24-53101dbbce23]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-d0fc2607-3d0f-4da9-ae24-53101dbbce23]: FINISHED"}}
+[debug] [2023-04-04T19:24:00.408Z] File C:\Users\alexa\WebstormProjects\pick3-v4\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-04-04T19:24:01.421Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T19:25:13.567Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cheerio": "^1.0.0-rc.12",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-04-04T19:25:13.567Z] Building nodejs source
+[debug] [2023-04-04T19:25:13.568Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T19:25:13.935Z] Serving at port 9005
+
+[debug] [2023-04-04T19:25:14.229Z] Got response from /__/functions.yaml {"endpoints":{"getAll":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"getAll"},"checkPicks":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"checkPicks"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T19:25:14.236Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: getAll, checkPicks. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getAll, checkPicks."}}
+[debug] [2023-04-04T19:36:28.668Z] File C:\Users\alexa\WebstormProjects\pick3-v4\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-04-04T19:36:29.676Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T19:36:31.985Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cheerio": "^1.0.0-rc.12",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-04-04T19:36:31.985Z] Building nodejs source
+[debug] [2023-04-04T19:36:31.986Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T19:36:32.520Z] Serving at port 9005
+
+[debug] [2023-04-04T19:36:32.977Z] Got response from /__/functions.yaml {"endpoints":{"getAll":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"getAll"},"checkPicks":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"checkPicks"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T19:36:32.986Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: getAll, checkPicks. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getAll, checkPicks."}}
+[debug] [2023-04-04T19:38:00.146Z] [work-queue] {"queuedWork":["/pick3-v4/us-central1/getAll-2023-04-04T19:38:00.146Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-04T19:38:00.147Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/pick3-v4/us-central1/getAll-2023-04-04T19:38:00.146Z"],"workRunningCount":1}
+[debug] [2023-04-04T19:38:00.147Z] Accepted request GET /pick3-v4/us-central1/getAll --> us-central1-getAll
+[debug] [2023-04-04T19:38:00.149Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-04T19:38:00.149Z] [functions] Got req.url=/pick3-v4/us-central1/getAll, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/pick3-v4/us-central1/getAll, mapping to path=/"}}
+[debug] [2023-04-04T19:38:00.149Z] [worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0"}}
+[debug] [2023-04-04T19:38:00.159Z] [worker-pool] addWorker(us-central1-getAll) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-getAll)"}}
+[debug] [2023-04-04T19:38:00.159Z] [worker-pool] Adding worker with key us-central1-getAll, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-getAll, total=1"}}
+[debug] [2023-04-04T19:38:02.859Z] [runtime-status] [12128] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:38:02.864Z] [runtime-status] [12128] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:38:02.865Z] [runtime-status] [12128] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-04T19:38:02.866Z] [runtime-status] [12128] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:38:02.952Z] [runtime-status] [12128] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-04T19:38:02.952Z] [runtime-status] [12128] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:38:02.954Z] [runtime-status] [12128] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:38:02.956Z] [runtime-status] [12128] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:38:02.957Z] [runtime-status] [12128] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:38:02.957Z] [runtime-status] [12128] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:38:02.963Z] [runtime-status] [12128] initializeApp(DEFAULT) {"storageBucket":"pick3-v4.appspot.com","projectId":"pick3-v4"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] initializeApp(DEFAULT) {\"storageBucket\":\"pick3-v4.appspot.com\",\"projectId\":\"pick3-v4\"}"}}
+[debug] [2023-04-04T19:38:03.122Z] [runtime-status] [12128] Functions runtime initialized. {"cwd":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-04T19:38:03.122Z] [runtime-status] [12128] Listening to port: \\?\pipe\fire_emu_b021c48ba7c4c955 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [12128] Listening to port: \\\\?\\pipe\\fire_emu_b021c48ba7c4c955"}}
+[debug] [2023-04-04T19:38:03.222Z] [worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: IDLE"}}
+[debug] [2023-04-04T19:38:03.223Z] [worker-pool] submitRequest(triggerId=us-central1-getAll) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-getAll)"}}
+[debug] [2023-04-04T19:38:03.223Z] [worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: BUSY"}}
+[info] i  functions: Beginning execution of "getAll" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"Beginning execution of \"getAll\""}}
+[debug] [2023-04-04T19:38:08.969Z] [worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: IDLE"}}
+[debug] [2023-04-04T19:38:08.970Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] i  functions: Finished "getAll" in 5948.1303ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"Finished \"getAll\" in 5948.1303ms"}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[info] >  Batch write succeeded {"user":"Batch write succeeded","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"\u001b[90m> \u001b[39m Batch write succeeded"}}
+[debug] [2023-04-04T19:40:00.699Z] [work-queue] {"queuedWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:40:00.698Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-04T19:40:00.700Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:40:00.698Z"],"workRunningCount":1}
+[debug] [2023-04-04T19:40:00.701Z] Accepted request GET /pick3-v4/us-central1/checkPicks --> us-central1-checkPicks
+[debug] [2023-04-04T19:40:00.705Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-04T19:40:00.706Z] [functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/"}}
+[debug] [2023-04-04T19:40:00.728Z] [worker-pool] addWorker(us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:40:00.729Z] [worker-pool] Adding worker with key us-central1-checkPicks, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-checkPicks, total=1"}}
+[debug] [2023-04-04T19:40:02.331Z] [runtime-status] [11900] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:40:02.334Z] [runtime-status] [11900] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:40:02.335Z] [runtime-status] [11900] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-04T19:40:02.336Z] [runtime-status] [11900] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:40:02.382Z] [runtime-status] [11900] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-04T19:40:02.382Z] [runtime-status] [11900] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:40:02.383Z] [runtime-status] [11900] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:40:02.385Z] [runtime-status] [11900] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:40:02.386Z] [runtime-status] [11900] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:40:02.386Z] [runtime-status] [11900] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:40:02.389Z] [runtime-status] [11900] initializeApp(DEFAULT) {"storageBucket":"pick3-v4.appspot.com","projectId":"pick3-v4"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] initializeApp(DEFAULT) {\"storageBucket\":\"pick3-v4.appspot.com\",\"projectId\":\"pick3-v4\"}"}}
+[debug] [2023-04-04T19:40:02.483Z] [runtime-status] [11900] Functions runtime initialized. {"cwd":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-04T19:40:02.483Z] [runtime-status] [11900] Listening to port: \\?\pipe\fire_emu_a9b7c328ba1c111d {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [11900] Listening to port: \\\\?\\pipe\\fire_emu_a9b7c328ba1c111d"}}
+[debug] [2023-04-04T19:40:02.555Z] [worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: IDLE"}}
+[debug] [2023-04-04T19:40:02.555Z] [worker-pool] submitRequest(triggerId=us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:40:02.555Z] [worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: BUSY"}}
+[info] i  functions: Beginning execution of "checkPicks" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Beginning execution of \"checkPicks\""}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-04-04T19:40:08.763Z] [worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: IDLE"}}
+[debug] [2023-04-04T19:40:08.764Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] i  functions: Finished "checkPicks" in 6200.8624ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Finished \"checkPicks\" in 6200.8624ms"}}
+[debug] [2023-04-04T19:45:53.756Z] File C:\Users\alexa\WebstormProjects\pick3-v4\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-04-04T19:45:54.766Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T19:45:57.341Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cheerio": "^1.0.0-rc.12",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-04-04T19:45:57.341Z] Building nodejs source
+[debug] [2023-04-04T19:45:57.341Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T19:45:57.794Z] Serving at port 9005
+
+[debug] [2023-04-04T19:45:58.103Z] Got response from /__/functions.yaml {"endpoints":{"getAll":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"getAll"},"checkPicks":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"checkPicks"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T19:45:58.109Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: getAll, checkPicks. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getAll, checkPicks."}}
+[debug] [2023-04-04T19:45:58.123Z] [worker-pool] Shutting down IDLE worker (us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:45:58.123Z] [worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: FINISHING"}}
+[debug] [2023-04-04T19:45:58.123Z] [worker-pool] Shutting down IDLE worker (us-central1-getAll) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-getAll)"}}
+[debug] [2023-04-04T19:45:58.123Z] [worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: FINISHING"}}
+[debug] [2023-04-04T19:45:58.135Z] [worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: exited"}}
+[debug] [2023-04-04T19:45:58.135Z] [worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-ee10db8c-9fd8-4fb1-b6b9-280680ca9845]: FINISHED"}}
+[debug] [2023-04-04T19:45:58.136Z] [worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: exited"}}
+[debug] [2023-04-04T19:45:58.136Z] [worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-750bc743-6d0c-4ac8-a94d-85544e926e11]: FINISHED"}}
+[debug] [2023-04-04T19:46:30.183Z] [work-queue] {"queuedWork":["/pick3-v4/us-central1/getAll-2023-04-04T19:46:30.182Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-04T19:46:30.183Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/pick3-v4/us-central1/getAll-2023-04-04T19:46:30.182Z"],"workRunningCount":1}
+[debug] [2023-04-04T19:46:30.183Z] Accepted request GET /pick3-v4/us-central1/getAll --> us-central1-getAll
+[debug] [2023-04-04T19:46:30.184Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-04T19:46:30.185Z] [functions] Got req.url=/pick3-v4/us-central1/getAll, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/pick3-v4/us-central1/getAll, mapping to path=/"}}
+[debug] [2023-04-04T19:46:30.185Z] [worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0"}}
+[debug] [2023-04-04T19:46:30.185Z] [worker-pool] Cleaned up workers for us-central1-getAll: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-getAll: 1 --> 0"}}
+[debug] [2023-04-04T19:46:30.191Z] [worker-pool] addWorker(us-central1-getAll) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-getAll)"}}
+[debug] [2023-04-04T19:46:30.192Z] [worker-pool] Adding worker with key us-central1-getAll, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-getAll, total=1"}}
+[debug] [2023-04-04T19:46:32.321Z] [runtime-status] [1264] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:46:32.326Z] [runtime-status] [1264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:46:32.326Z] [runtime-status] [1264] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-04T19:46:32.328Z] [runtime-status] [1264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:46:32.399Z] [runtime-status] [1264] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-04T19:46:32.400Z] [runtime-status] [1264] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:46:32.401Z] [runtime-status] [1264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:46:32.403Z] [runtime-status] [1264] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:46:32.404Z] [runtime-status] [1264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:46:32.404Z] [runtime-status] [1264] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:46:32.410Z] [runtime-status] [1264] initializeApp(DEFAULT) {"storageBucket":"pick3-v4.appspot.com","projectId":"pick3-v4"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] initializeApp(DEFAULT) {\"storageBucket\":\"pick3-v4.appspot.com\",\"projectId\":\"pick3-v4\"}"}}
+[debug] [2023-04-04T19:46:32.621Z] [runtime-status] [1264] Functions runtime initialized. {"cwd":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-04T19:46:32.622Z] [runtime-status] [1264] Listening to port: \\?\pipe\fire_emu_ffbf0141d6e2f376 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"[runtime-status] [1264] Listening to port: \\\\?\\pipe\\fire_emu_ffbf0141d6e2f376"}}
+[debug] [2023-04-04T19:46:32.651Z] [worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: IDLE"}}
+[debug] [2023-04-04T19:46:32.651Z] [worker-pool] submitRequest(triggerId=us-central1-getAll) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-getAll)"}}
+[debug] [2023-04-04T19:46:32.652Z] [worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: BUSY"}}
+[info] i  functions: Beginning execution of "getAll" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"Beginning execution of \"getAll\""}}
+[debug] [2023-04-04T19:46:37.921Z] [worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: IDLE"}}
+[debug] [2023-04-04T19:46:37.921Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] i  functions: Finished "getAll" in 5489.4636ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"Finished \"getAll\" in 5489.4636ms"}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[info] >  Batch write succeeded {"user":"Batch write succeeded","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getAll"},"extension":{},"message":"\u001b[90m> \u001b[39m Batch write succeeded"}}
+[debug] [2023-04-04T19:47:10.236Z] [work-queue] {"queuedWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:47:10.236Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-04T19:47:10.237Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:47:10.236Z"],"workRunningCount":1}
+[debug] [2023-04-04T19:47:10.237Z] Accepted request GET /pick3-v4/us-central1/checkPicks --> us-central1-checkPicks
+[debug] [2023-04-04T19:47:10.238Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-04T19:47:10.239Z] [functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/"}}
+[debug] [2023-04-04T19:47:10.253Z] [worker-pool] addWorker(us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:47:10.254Z] [worker-pool] Adding worker with key us-central1-checkPicks, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-checkPicks, total=1"}}
+[debug] [2023-04-04T19:47:12.697Z] [runtime-status] [6708] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:47:12.703Z] [runtime-status] [6708] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:47:12.703Z] [runtime-status] [6708] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-04T19:47:12.704Z] [runtime-status] [6708] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:47:12.837Z] [runtime-status] [6708] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-04T19:47:12.837Z] [runtime-status] [6708] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:47:12.838Z] [runtime-status] [6708] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:47:12.841Z] [runtime-status] [6708] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:47:12.842Z] [runtime-status] [6708] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:47:12.843Z] [runtime-status] [6708] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:47:12.847Z] [runtime-status] [6708] initializeApp(DEFAULT) {"storageBucket":"pick3-v4.appspot.com","projectId":"pick3-v4"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] initializeApp(DEFAULT) {\"storageBucket\":\"pick3-v4.appspot.com\",\"projectId\":\"pick3-v4\"}"}}
+[debug] [2023-04-04T19:47:12.995Z] [runtime-status] [6708] Functions runtime initialized. {"cwd":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-04T19:47:12.995Z] [runtime-status] [6708] Listening to port: \\?\pipe\fire_emu_a13eee61aaf564eb {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6708] Listening to port: \\\\?\\pipe\\fire_emu_a13eee61aaf564eb"}}
+[debug] [2023-04-04T19:47:13.035Z] [worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: IDLE"}}
+[debug] [2023-04-04T19:47:13.035Z] [worker-pool] submitRequest(triggerId=us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:47:13.036Z] [worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: BUSY"}}
+[info] i  functions: Beginning execution of "checkPicks" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Beginning execution of \"checkPicks\""}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-04-04T19:47:25.693Z] [worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: IDLE"}}
+[debug] [2023-04-04T19:47:25.693Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] i  functions: Finished "checkPicks" in 12652.5015ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Finished \"checkPicks\" in 12652.5015ms"}}
+[debug] [2023-04-04T19:50:00.168Z] File C:\Users\alexa\WebstormProjects\pick3-v4\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-04-04T19:50:01.212Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T19:50:03.858Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cheerio": "^1.0.0-rc.12",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-04-04T19:50:03.859Z] Building nodejs source
+[debug] [2023-04-04T19:50:03.859Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T19:50:04.195Z] Serving at port 9005
+
+[debug] [2023-04-04T19:50:04.477Z] Got response from /__/functions.yaml {"endpoints":{"getAll":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"getAll"},"checkPicks":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"checkPicks"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T19:50:04.484Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: getAll, checkPicks. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getAll, checkPicks."}}
+[debug] [2023-04-04T19:50:04.498Z] [worker-pool] Shutting down IDLE worker (us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:50:04.498Z] [worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: FINISHING"}}
+[debug] [2023-04-04T19:50:04.498Z] [worker-pool] Shutting down IDLE worker (us-central1-getAll) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-getAll)"}}
+[debug] [2023-04-04T19:50:04.499Z] [worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: FINISHING"}}
+[debug] [2023-04-04T19:50:04.509Z] [worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: exited"}}
+[debug] [2023-04-04T19:50:04.510Z] [worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-getAll-cbe69554-bf2c-4059-8dcc-c36b4e322b8b]: FINISHED"}}
+[debug] [2023-04-04T19:50:04.510Z] [worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: exited"}}
+[debug] [2023-04-04T19:50:04.510Z] [worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-848749a8-339d-45ea-af1e-72a1f4e96526]: FINISHED"}}
+[debug] [2023-04-04T19:50:23.086Z] [work-queue] {"queuedWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:50:23.086Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-04T19:50:23.087Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:50:23.086Z"],"workRunningCount":1}
+[debug] [2023-04-04T19:50:23.088Z] Accepted request GET /pick3-v4/us-central1/checkPicks --> us-central1-checkPicks
+[debug] [2023-04-04T19:50:23.089Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-04T19:50:23.090Z] [functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/"}}
+[debug] [2023-04-04T19:50:23.090Z] [worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0"}}
+[debug] [2023-04-04T19:50:23.091Z] [worker-pool] Cleaned up workers for us-central1-getAll: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-getAll: 1 --> 0"}}
+[debug] [2023-04-04T19:50:23.102Z] [worker-pool] addWorker(us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:50:23.103Z] [worker-pool] Adding worker with key us-central1-checkPicks, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-checkPicks, total=1"}}
+[debug] [2023-04-04T19:50:25.084Z] [runtime-status] [3504] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:50:25.090Z] [runtime-status] [3504] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:50:25.091Z] [runtime-status] [3504] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-04T19:50:25.093Z] [runtime-status] [3504] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:50:25.170Z] [runtime-status] [3504] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-04T19:50:25.171Z] [runtime-status] [3504] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:50:25.172Z] [runtime-status] [3504] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:50:25.174Z] [runtime-status] [3504] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:50:25.175Z] [runtime-status] [3504] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:50:25.176Z] [runtime-status] [3504] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:50:25.179Z] [runtime-status] [3504] initializeApp(DEFAULT) {"storageBucket":"pick3-v4.appspot.com","projectId":"pick3-v4"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] initializeApp(DEFAULT) {\"storageBucket\":\"pick3-v4.appspot.com\",\"projectId\":\"pick3-v4\"}"}}
+[debug] [2023-04-04T19:50:25.318Z] [runtime-status] [3504] Functions runtime initialized. {"cwd":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-04T19:50:25.318Z] [runtime-status] [3504] Listening to port: \\?\pipe\fire_emu_ad19cf21ee9caa52 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [3504] Listening to port: \\\\?\\pipe\\fire_emu_ad19cf21ee9caa52"}}
+[debug] [2023-04-04T19:50:25.378Z] [worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: IDLE"}}
+[debug] [2023-04-04T19:50:25.378Z] [worker-pool] submitRequest(triggerId=us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:50:25.378Z] [worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: BUSY"}}
+[info] i  functions: Beginning execution of "checkPicks" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Beginning execution of \"checkPicks\""}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-04-04T19:50:37.291Z] [worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: IDLE"}}
+[debug] [2023-04-04T19:50:37.291Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] i  functions: Finished "checkPicks" in 11905.3318ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Finished \"checkPicks\" in 11905.3318ms"}}
+[debug] [2023-04-04T19:52:03.328Z] File C:\Users\alexa\WebstormProjects\pick3-v4\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-04-04T19:52:04.338Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T19:52:05.810Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cheerio": "^1.0.0-rc.12",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-04-04T19:52:05.811Z] Building nodejs source
+[debug] [2023-04-04T19:52:05.811Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T19:52:06.051Z] Serving at port 9005
+
+[debug] [2023-04-04T19:52:06.230Z] Got response from /__/functions.yaml {"endpoints":{"getAll":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"getAll"},"checkPicks":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"checkPicks"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T19:52:06.235Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: getAll, checkPicks. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getAll, checkPicks."}}
+[debug] [2023-04-04T19:52:06.243Z] [worker-pool] Shutting down IDLE worker (us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:52:06.246Z] [worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: FINISHING"}}
+[debug] [2023-04-04T19:52:06.255Z] [worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: exited"}}
+[debug] [2023-04-04T19:52:06.255Z] [worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-6d12693d-eebf-4ec6-9e6a-06b228a424a5]: FINISHED"}}
+[debug] [2023-04-04T19:52:15.159Z] [work-queue] {"queuedWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:52:15.159Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-04T19:52:15.159Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:52:15.159Z"],"workRunningCount":1}
+[debug] [2023-04-04T19:52:15.160Z] Accepted request GET /pick3-v4/us-central1/checkPicks --> us-central1-checkPicks
+[debug] [2023-04-04T19:52:15.162Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-04T19:52:15.163Z] [functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/"}}
+[debug] [2023-04-04T19:52:15.163Z] [worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0"}}
+[debug] [2023-04-04T19:52:15.176Z] [worker-pool] addWorker(us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:52:15.177Z] [worker-pool] Adding worker with key us-central1-checkPicks, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-checkPicks, total=1"}}
+[debug] [2023-04-04T19:52:16.969Z] [runtime-status] [6092] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:52:16.973Z] [runtime-status] [6092] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:52:16.973Z] [runtime-status] [6092] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-04T19:52:16.975Z] [runtime-status] [6092] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:52:17.024Z] [runtime-status] [6092] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-04T19:52:17.024Z] [runtime-status] [6092] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:52:17.025Z] [runtime-status] [6092] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:52:17.027Z] [runtime-status] [6092] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:52:17.027Z] [runtime-status] [6092] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:52:17.028Z] [runtime-status] [6092] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:52:17.030Z] [runtime-status] [6092] initializeApp(DEFAULT) {"storageBucket":"pick3-v4.appspot.com","projectId":"pick3-v4"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] initializeApp(DEFAULT) {\"storageBucket\":\"pick3-v4.appspot.com\",\"projectId\":\"pick3-v4\"}"}}
+[debug] [2023-04-04T19:52:17.132Z] [runtime-status] [6092] Functions runtime initialized. {"cwd":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-04T19:52:17.132Z] [runtime-status] [6092] Listening to port: \\?\pipe\fire_emu_d4269e84b3eaa37a {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [6092] Listening to port: \\\\?\\pipe\\fire_emu_d4269e84b3eaa37a"}}
+[debug] [2023-04-04T19:52:17.164Z] [worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: IDLE"}}
+[debug] [2023-04-04T19:52:17.164Z] [worker-pool] submitRequest(triggerId=us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:52:17.164Z] [worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: BUSY"}}
+[info] i  functions: Beginning execution of "checkPicks" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Beginning execution of \"checkPicks\""}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-04-04T19:52:28.593Z] [worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: IDLE"}}
+[debug] [2023-04-04T19:52:28.594Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] i  functions: Finished "checkPicks" in 11424.5797ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Finished \"checkPicks\" in 11424.5797ms"}}
+[debug] [2023-04-04T19:53:11.455Z] File C:\Users\alexa\WebstormProjects\pick3-v4\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-04-04T19:53:12.493Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T19:53:14.872Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cheerio": "^1.0.0-rc.12",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-04-04T19:53:14.873Z] Building nodejs source
+[debug] [2023-04-04T19:53:14.873Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T19:53:15.265Z] Serving at port 9005
+
+[debug] [2023-04-04T19:53:15.544Z] Got response from /__/functions.yaml {"endpoints":{"getAll":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"getAll"},"checkPicks":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"checkPicks"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T19:53:15.573Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: getAll, checkPicks. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getAll, checkPicks."}}
+[debug] [2023-04-04T19:53:15.586Z] [worker-pool] Shutting down IDLE worker (us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:53:15.586Z] [worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: FINISHING"}}
+[debug] [2023-04-04T19:53:15.598Z] [worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: exited"}}
+[debug] [2023-04-04T19:53:15.598Z] [worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-14a2e675-fcb2-4053-9e00-dd4bdfe98c17]: FINISHED"}}
+[debug] [2023-04-04T19:53:22.718Z] [work-queue] {"queuedWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:53:22.718Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-04T19:53:22.718Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/pick3-v4/us-central1/checkPicks-2023-04-04T19:53:22.718Z"],"workRunningCount":1}
+[debug] [2023-04-04T19:53:22.718Z] Accepted request GET /pick3-v4/us-central1/checkPicks --> us-central1-checkPicks
+[debug] [2023-04-04T19:53:22.719Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-04T19:53:22.720Z] [functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/pick3-v4/us-central1/checkPicks, mapping to path=/"}}
+[debug] [2023-04-04T19:53:22.720Z] [worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-checkPicks: 1 --> 0"}}
+[debug] [2023-04-04T19:53:22.726Z] [worker-pool] addWorker(us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:53:22.726Z] [worker-pool] Adding worker with key us-central1-checkPicks, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-checkPicks, total=1"}}
+[debug] [2023-04-04T19:53:24.806Z] [runtime-status] [8940] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:53:24.813Z] [runtime-status] [8940] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:53:24.814Z] [runtime-status] [8940] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-04T19:53:24.815Z] [runtime-status] [8940] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:53:24.905Z] [runtime-status] [8940] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-04T19:53:24.905Z] [runtime-status] [8940] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:53:24.908Z] [runtime-status] [8940] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:53:24.910Z] [runtime-status] [8940] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:53:24.912Z] [runtime-status] [8940] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-04T19:53:24.912Z] [runtime-status] [8940] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-04T19:53:24.918Z] [runtime-status] [8940] initializeApp(DEFAULT) {"storageBucket":"pick3-v4.appspot.com","projectId":"pick3-v4"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] initializeApp(DEFAULT) {\"storageBucket\":\"pick3-v4.appspot.com\",\"projectId\":\"pick3-v4\"}"}}
+[debug] [2023-04-04T19:53:25.109Z] [runtime-status] [8940] Functions runtime initialized. {"cwd":"C:\\Users\\alexa\\WebstormProjects\\pick3-v4\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\alexa\\\\WebstormProjects\\\\pick3-v4\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-04T19:53:25.109Z] [runtime-status] [8940] Listening to port: \\?\pipe\fire_emu_6d5f9e23a4387ab6 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"[runtime-status] [8940] Listening to port: \\\\?\\pipe\\fire_emu_6d5f9e23a4387ab6"}}
+[debug] [2023-04-04T19:53:25.176Z] [worker-us-central1-checkPicks-afb1d266-6857-4c35-8f2d-3270da5d05c1]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-afb1d266-6857-4c35-8f2d-3270da5d05c1]: IDLE"}}
+[debug] [2023-04-04T19:53:25.176Z] [worker-pool] submitRequest(triggerId=us-central1-checkPicks) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-checkPicks)"}}
+[debug] [2023-04-04T19:53:25.176Z] [worker-us-central1-checkPicks-afb1d266-6857-4c35-8f2d-3270da5d05c1]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-afb1d266-6857-4c35-8f2d-3270da5d05c1]: BUSY"}}
+[info] i  functions: Beginning execution of "checkPicks" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Beginning execution of \"checkPicks\""}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-04-04T19:53:37.257Z] [worker-us-central1-checkPicks-afb1d266-6857-4c35-8f2d-3270da5d05c1]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-checkPicks-afb1d266-6857-4c35-8f2d-3270da5d05c1]: IDLE"}}
+[debug] [2023-04-04T19:53:37.258Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] i  functions: Finished "checkPicks" in 12073.8527ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-checkPicks"},"extension":{},"message":"Finished \"checkPicks\" in 12073.8527ms"}}
