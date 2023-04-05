@@ -30,7 +30,7 @@ function Home() {
     let month = new Intl.DateTimeFormat("en-US", optionsM).format(newDate);
     const [selectedMonth, setSelectedMonth] = useState(month)
     useEffect(() => {
-        const q = query(collection(db, "picks"), orderBy('index', 'desc'), where("drawMonth", "==", 'Mar'));
+        const q = query(collection(db, "picks"), orderBy('index', 'desc'), where("drawMonth", "==", selectedMonth));
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
             dispatch(
                 getPicks(
