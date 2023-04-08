@@ -275,7 +275,7 @@ exports.checkAllPicks = functionsFirebase.https.onRequest(async (request, respon
         // Function to check if sumAllThreeNums appears in the previous 3 draws
         function countPreviousDraws(draws, currentIndex) {
             const start = currentIndex + 1;
-            const end = Math.min(currentIndex + 4, draws.length);
+            const end = Math.min(currentIndex + 9, draws.length);
             const currentSum = draws[currentIndex].sumAllThreeNums;
             let count = 0;
 
@@ -520,10 +520,10 @@ exports.checkAllPicks = functionsFirebase.https.onRequest(async (request, respon
         // Apply the rules to the input object
         const updatedObject = applyRules(draw.points)
         // Update the Firestore document with the new points and reasonsList
-        // await admin.firestore().collection('picks').doc(draw.id).update({
-        //     points: updatedObject,
-        //     reasonsList: draw.reasonsList
-        // });
+        await admin.firestore().collection('picks').doc(draw.id).update({
+            points: updatedObject,
+            reasonsList: draw.reasonsList
+        });
         if(updatedObject.critical>0){
             rejectedCount += 1;
         }else {
@@ -538,7 +538,7 @@ exports.checkAllPicks = functionsFirebase.https.onRequest(async (request, respon
 
 });
 
-exports.getOne = functionsFirebase.https.onRequest(async (request, response) => {
+exports.getOne = functionsFirebase.pubsub.schedule('0 13,23 * * *').timeZone('America/Chicago').onRun(async context => {
     let today = new Date();
     let options = {
         timeZone: 'America/Chicago',
@@ -731,11 +731,11 @@ exports.getOne = functionsFirebase.https.onRequest(async (request, response) => 
     }).catch(error => {
         console.error('Batch write failed:', error);
     });
-    response.send('done');
+    return null
 });
 
 
-exports.checkNewestPick = functionsFirebase.https.onRequest(async (request, response) => {
+exports.checkNewestPick = functionsFirebase.pubsub.schedule('3 13,23 * * *').timeZone('America/Chicago').onRun(async context => {
     const newDateTwo = new Date()
     const optionsMM = {month: "short", timeZone: 'America/Chicago'};
 
@@ -744,7 +744,13 @@ exports.checkNewestPick = functionsFirebase.https.onRequest(async (request, resp
     const drawsCollection = admin.firestore().collection('picks').where('drawMonth', '==', month).orderBy('index', 'desc');
     const snapshot = await drawsCollection.get();
     const draws = [];
-
+    let lowHighUpOj = {
+        LH: 0,
+        LL: 0,
+        EH: 0,
+        HH: 0,
+        HL: 0
+    }
     // Loop through the documents and add them to the array
     snapshot.forEach(doc => {
         const drawData = doc.data();
@@ -771,10 +777,16 @@ exports.checkNewestPick = functionsFirebase.https.onRequest(async (request, resp
 
         }
 
+    //checking for lowHighEqual
+    if (!lowHighUpOj.hasOwnProperty(newestDraw.lowHighEqual)) {
+        newestDraw.points.nonCritical += 1;
+        newestDraw.reasonsList.push('not in lowHighEqual');
+    }
+
         // Function to check if sumAllThreeNums appears in the previous 3 draws
         function countPreviousDraws(draws, index) {
             const start = index + 1;
-            const end = Math.min(index + 4, draws.length);
+            const end = Math.min(index + 9, draws.length);
             const currentSum = draws[index].sumAllThreeNums;
             let count = 0;
 
@@ -834,6 +846,9 @@ exports.checkNewestPick = functionsFirebase.https.onRequest(async (request, resp
             const results = {
                 allDifferenceString: 0,
                 allPositionsString: 0,
+                allDifferenceFirstTwoString: 0,
+                allDifferenceFirstAndLastString: 0,
+                allDifferenceLastTwoString: 0
             };
 
             for (let i = start; i < end; i++) {
@@ -844,6 +859,17 @@ exports.checkNewestPick = functionsFirebase.https.onRequest(async (request, resp
 
                 if (draws[i].previousDrawDifference.allDifferenceString === currentDraw.previousDrawDifference.allDifferenceString) {
                     results.allDifferenceString++;
+                }
+
+                //added this just now
+                if (draws[i].previousDrawDifference.allDifferenceFirstTwoString === currentDraw.previousDrawDifference.allDifferenceFirstTwoString) {
+                    results.allDifferenceFirstTwoString++;
+                }
+                if (draws[i].previousDrawDifference.allDifferenceFirstAndLastString === currentDraw.previousDrawDifference.allDifferenceFirstAndLastString) {
+                    results.allDifferenceFirstAndLastString++;
+                }
+                if (draws[i].previousDrawDifference.allDifferenceLastTwoString === currentDraw.previousDrawDifference.allDifferenceLastTwoString) {
+                    results.allDifferenceLastTwoString++;
                 }
             }
 
@@ -862,11 +888,24 @@ exports.checkNewestPick = functionsFirebase.https.onRequest(async (request, resp
             newestDraw.reasonsList.push(`previousDrawDifferenceAllPositionsInPrevious3: ${previousDrawDifferenceOccurrences.allPositionsString} occurrences`);
         }
 
+        //added just now
+        if (previousDrawDifferenceOccurrences.allDifferenceFirstTwoString > 0) {
+            newestDraw.points.nonCritical += previousDrawDifferenceOccurrences.allDifferenceFirstTwoString;
+            newestDraw.reasonsList.push(`previousDrawDifferenceFirstTwoStringInPrevious3: ${previousDrawDifferenceOccurrences.allDifferenceFirstTwoString} occurrences`);
+        }
+        if (previousDrawDifferenceOccurrences.allDifferenceFirstAndLastString > 0) {
+            newestDraw.points.nonCritical += previousDrawDifferenceOccurrences.allDifferenceFirstAndLastString;
+            newestDraw.reasonsList.push(`previousDrawDifferenceFirstAndLasttringInPrevious3: ${previousDrawDifferenceOccurrences.allDifferenceFirstAndLastString} occurrences`);
+        }
+        if (previousDrawDifferenceOccurrences.allDifferenceLastTwoString > 0) {
+            newestDraw.points.nonCritical += previousDrawDifferenceOccurrences.allDifferenceLastTwoString;
+            newestDraw.reasonsList.push(`previousDrawDifferenceLastTwoStringInPrevious3: ${previousDrawDifferenceOccurrences.allDifferenceLastTwoString} occurrences`);
+        }
 
         // Function to count the number of occurrences of fullNumsString in winningCombinationsObj.list for all previous draws
         function countFullNumsStringOccurrences(draws, currentIndex) {
             const start = currentIndex + 1;
-            const end = Math.min(currentIndex + 32, draws.length);
+            const end = Math.min(currentIndex + 61, draws.length);
             const currentDraw = draws[currentIndex];
             const currentFullNumsString = currentDraw.fullNumsString;
             let count = 0;
@@ -892,7 +931,7 @@ exports.checkNewestPick = functionsFirebase.https.onRequest(async (request, resp
         // Function to count the number of occurrences of fullNumsString in all previous draws
         function countFullNumsStringOccurrencesInAllDraws(draws, currentIndex) {
             const start = currentIndex + 1;
-            const end = Math.min(currentIndex + 50, draws.length);
+            const end = Math.min(currentIndex + 61, draws.length);
             const currentDraw = draws[currentIndex];
             const currentFullNumsString = currentDraw.fullNumsString;
             let count = 0;
@@ -918,7 +957,7 @@ exports.checkNewestPick = functionsFirebase.https.onRequest(async (request, resp
         // Function to count the number of occurrences of firstTwo/lastTwo/firstAndLast in all previous draws
         function countFirstTwoLastTwoFirstAndLast(draws, currentIndex) {
             const start = currentIndex + 1;
-            const end = Math.min(currentIndex + 11, draws.length);
+            const end = Math.min(currentIndex + 61, draws.length);
             const currentDraw = draws[currentIndex];
             let count = 0;
 
@@ -996,11 +1035,11 @@ exports.checkNewestPick = functionsFirebase.https.onRequest(async (request, resp
             reasonsList: newestDraw.reasonsList
         });
 
-    response.send('done');
+    return null
 
 });
 
-exports.getGuesses = functionsFirebase.https.onRequest(async (request, response) => {
+exports.getGuesses = functionsFirebase.pubsub.schedule('5 10,20 * * *').timeZone('America/Chicago').onRun(async context => {
     let newDate = new Date()
     const optionsM = {month: "short", timeZone: 'America/Chicago'};
 
@@ -1056,6 +1095,7 @@ exports.getGuesses = functionsFirebase.https.onRequest(async (request, response)
         //end
 
         let count = 0;
+        let deleteLater = ['917','417','947','914']
 
         function getRandomNumbers() {
             return Array.from({length: 3}, () => Math.floor(Math.random() * 10));
@@ -1244,7 +1284,9 @@ exports.getGuesses = functionsFirebase.https.onRequest(async (request, response)
                 const results = {
                     allDifferenceString: 0,
                     allPositionsString: 0,
-                    allDifferenceFirstTwoString: 0
+                    allDifferenceFirstTwoString: 0,
+                    allDifferenceFirstAndLastString: 0,
+                    allDifferenceLastTwoString: 0
                 };
 
                 for (let i = start; i < end; i++) {
@@ -1463,6 +1505,9 @@ exports.getGuesses = functionsFirebase.https.onRequest(async (request, response)
             //also add one for the same day last month from today
             //end of TODO
 
+            if(deleteLater.includes(randomNumber.fullNumsString)){
+                console.log(`winner:${randomNumber.fullNumsString}`)
+            }
             if(randomNumber.points.critical<1&&randomNumber.points.nonCritical<1){
                 passCount += 1
                 guesses.push(randomNumber);
@@ -1493,7 +1538,7 @@ exports.getGuesses = functionsFirebase.https.onRequest(async (request, response)
 
     console.log('passCount', passCount);
     console.log('rejectedCount', rejectedCount);
-    response.send('done');
+    return null
 })
 
 
