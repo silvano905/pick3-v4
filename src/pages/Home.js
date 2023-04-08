@@ -9,6 +9,7 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
 import {selectPicks, getPicks} from "../redux/picks/picksSlice";
+import {getGuesses, selectGuesses} from "../redux/guesses/guessesSlice";
 import {collection, deleteDoc, doc, getDocs, limit, onSnapshot, orderBy, query, where} from "firebase/firestore";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -24,6 +25,7 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 function Home() {
     const picks = useSelector(selectPicks)
+    const guesses = useSelector(selectGuesses)
     const dispatch = useDispatch()
     let newDate = new Date()
     const optionsM = {month: "short", timeZone: 'America/Chicago'};
@@ -39,6 +41,17 @@ function Home() {
                         data.timestamp = data.timestamp.toDate().toISOString(); // Convert Firestore Timestamp to ISO string
                         return {data: data, id: doc.id};
                     })
+                )
+            )
+        });
+
+
+
+        const guessesRef = query(collection(db, "guesses"));
+        const guessesQuery = onSnapshot(guessesRef, (querySnapshot) => {
+            dispatch(
+                getGuesses(
+                    querySnapshot.docs.map(doc => ({data: doc.data(), id: doc.id}))
                 )
             )
         });
@@ -160,6 +173,57 @@ function Home() {
     }
 
 
+    let guessesList;
+    if(guesses) {
+        guessesList = guesses.map((item, x) => {
+            return (
+                <Grid item xs={6} sm={6} lg={6}>
+                    <Card sx={{ minWidth: 20 }} style={{color: '#03071e', margin: 4}}>
+                        <CardContent style={{ textAlign: "center" }}>
+                            <Stack direction="row" justifyContent="center" alignItems="center" spacing={2}>
+                                <Typography variant="h5" gutterBottom style={{color: item.data.correctGuess?'blue':'black'}}>
+                                    {item.data.fullNumsString}
+                                </Typography>
+                            </Stack>
+                            <Accordion>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <MoreHorizIcon/>
+                                </AccordionSummary>
+                                <AccordionDetails style={{ textAlign: "center" }}>
+                                    <Typography variant="h6" color="text.secondary" gutterBottom style={{color: '#023047'}}>
+                                        sum
+                                    </Typography>
+                                    <Typography variant="h6" color="text.secondary" gutterBottom style={{marginTop: -12}}>
+                                        {item.data.sumAllThreeNums}
+                                    </Typography>
+
+                                    <Typography variant="h6" color="text.secondary" gutterBottom style={{color: '#023047'}}>
+                                        evenOdd
+                                    </Typography>
+                                    <Typography variant="h6" color="text.secondary" gutterBottom style={{marginTop: -12}}>
+                                        {item.data.evenOdd}
+                                    </Typography>
+
+                                    <Typography variant="h6" color="text.secondary" gutterBottom style={{color: '#023047'}}>
+                                        LowHighEqual
+                                    </Typography>
+                                    <Typography variant="h6" color="text.secondary" gutterBottom style={{marginTop: -12}}>
+                                        {item.data.lowHighEqual}
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </CardContent>
+
+                    </Card>
+                </Grid>
+            )
+        })
+    }
+
 
 
     return (
@@ -169,6 +233,16 @@ function Home() {
                     Winning Numbers
                 </Typography>
                 <MonthSelector selectedMonth={selectedMonth} setSelectedMonth={setSelectedMonth}/>
+            </div>
+
+            <div style={{textAlign: "center", marginTop: 8}}>
+                <Typography variant="h6" gutterBottom style={{color: 'black', marginTop: 10}}>
+                    possible winning numbers
+                </Typography>
+
+                <Grid container direction="row" justifyContent="space-evenly" alignItems="center">
+                    {guessesList}
+                </Grid>
             </div>
 
 
